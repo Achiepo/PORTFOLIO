@@ -13,6 +13,7 @@
     --heading-color: #2d465e; 
     --accent-color: #0d83fd;
     --contrast-color: #ffffff;
+    --Jaune-color:#ffff00;
   }
   
   
@@ -33,9 +34,8 @@
     scroll-behavior: smooth;
   }
   
-  /*--------------------------------------------------------------
-  # General Style et Classes
-  --------------------------------------------------------------*/
+  /* General Style et Classes */
+ 
   body {
     color: var(--default-color);
     background-color: var(--background-color);
@@ -63,8 +63,7 @@
     font-family: var(--heading-font);
   }
   
-  /*  Email pour Messages
-  ------------------------------*/
+  /*  Email pour Messages*/
   .email-form .error-message {
     display: none;
     background: #df1529;
@@ -114,9 +113,8 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  #  Header globale
-  --------------------------------------------------------------*/
+
+  /* #  Header globale */ 
   .header {
     --background-color: rgba(255, 255, 255, 0.856);
     color: var(--default-color);
@@ -197,9 +195,8 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
+  
+  /* Navigation Menu */
   /* Navmenu - Desktop */
   @media (min-width: 1200px) {
     .navmenu {
@@ -434,9 +431,8 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Global Footer
-  --------------------------------------------------------------*/
+
+  /* Global Footer */
   .footer {
     color: var(--default-color);
     background-color: var(--background-color);
@@ -551,9 +547,9 @@
     font-size: 13px;
   }
   
-  /*--------------------------------------------------------------
-  # Scroll Top Button
-  --------------------------------------------------------------*/
+  
+   /* Scroll Top Button */
+  
   .scroll-top {
     position: fixed;
     visibility: hidden;
@@ -585,18 +581,17 @@
     bottom: 15px;
   }
   
-  /*--------------------------------------------------------------
-  #  animation delaire sur mobile devices
-  --------------------------------------------------------------*/
+   /* animation delaire sur mobile devices */
+  
   @media screen and (max-width: 768px) {
     [data-aos-delay] {
       transition-delay: 0 !important;
     }
   }
   
-  /*--------------------------------------------------------------
-  # pages globale titre 
-  --------------------------------------------------------------*/
+ 
+  /* pages globale titre  */
+  
   .page-title {
     color: var(--default-color);
     background-color: var(--background-color);
@@ -633,9 +628,9 @@
     color: color-mix(in srgb, var(--default-color), transparent 70%);
   }
   
-  /*--------------------------------------------------------------
-  # Global Sections
-  --------------------------------------------------------------*/
+
+  /* # Global Sections */
+ 
   section,
   .section {
     color: var(--default-color);
@@ -653,9 +648,9 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Global Section Titles
-  --------------------------------------------------------------*/
+  
+  /*  Global Section Titles */
+ 
   .section-title {
     text-align: center;
     padding-bottom: 60px;
@@ -688,9 +683,8 @@
   }
 
   
-  /*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
+  /*  Hero Section */
+  
   .hero {
     position: relative;
     padding-top: 160px;
@@ -704,7 +698,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-
+    background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--Jaune-color), transparent 58%), transparent 40%);
     pointer-events: none;
   }
   
@@ -933,9 +927,9 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # About Section
-  --------------------------------------------------------------*/
+ 
+   /* About Section */
+ 
   .about .about-meta {
     color: var(--accent-color);
     font-weight: 600;
@@ -1123,9 +1117,9 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Features Section
-  --------------------------------------------------------------*/
+  
+   /* Features Section */
+  
   .features .nav-tabs {
     border: 0;
     background-color: color-mix(in srgb, var(--default-color), transparent 96%);
@@ -1238,21 +1232,21 @@
     margin-bottom: 0;
   }
   
-  /*--------------------------------------------------------------
-  # Features Cards Section
-  --------------------------------------------------------------*/
-  .features-cards {
+  
+   /* Features Cards Section */
+ 
+  .cards {
     --default-color: #555;
     --heading-color: #333;
   }
   
-  .features-cards .feature-box {
+  .cards .box {
     height: 100%;
     padding: 40px 30px;
     border-radius: 10px;
   }
   
-  .features-cards .feature-box i {
+  .cards .box i {
     font-size: 44px;
     display: inline-block;
     line-height: 0;
@@ -1260,52 +1254,38 @@
     margin-bottom: 20px;
   }
   
-  .features-cards .feature-box h4 {
+  .cards .box h4 {
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 10px 0;
   }
   
-  .features-cards .feature-box p {
+  .cards .box p {
     font-size: 15px;
     margin-bottom: 0;
   }
   
-  .features-cards .feature-box.orange {
-    background-color: #fff3e2;
+  .cards .box.jaune {
+    background-color: rgba(255, 255, 0, 0.486);
   }
   
-  .features-cards .feature-box.orange i {
-    color: #edb86e;
+
+  
+  .cards .box.aqua {
+    background-color: rgba(127, 255, 212, 0.767);
   }
   
-  .features-cards .feature-box.blue {
-    background-color: #deedfd;
+  
+  .cards .box.bleu {
+    background-color: rgba(173, 212, 230, 0.986);
   }
   
-  .features-cards .feature-box.blue i {
-    color: #20a5f8;
+  .cards .box.light {
+    background-color: rgba(0, 0, 0, 0.151);
   }
   
-  .features-cards .feature-box.green {
-    background-color: #d5f1e4;
-  }
+   /* Features 2 Section */
   
-  .features-cards .feature-box.green i {
-    color: #48c88a;
-  }
-  
-  .features-cards .feature-box.red {
-    background-color: #fdeded;
-  }
-  
-  .features-cards .feature-box.red i {
-    color: #f28484;
-  }
-  
-  /*--------------------------------------------------------------
-  # Features 2 Section
-  --------------------------------------------------------------*/
   .features-2 .feature-item .feature-icon {
     width: 60px;
     height: 60px;
@@ -1361,9 +1341,9 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Call To Action Section
-  --------------------------------------------------------------*/
+  
+  /* Call  Action Section */
+  
   .call-to-action .container {
     background: var(--accent-color);
     color: var(--contrast-color);
@@ -1525,9 +1505,8 @@
     }
   }
   
-  /*--------------------------------------------------------------
-  # Clients Section
-  --------------------------------------------------------------*/
+ /* cleints section */
+
   .clients .swiper-slide img {
     opacity: 0.5;
     transition: 0.3s;
@@ -1559,25 +1538,8 @@
     background-color: var(--accent-color);
   }
   
-  /*--------------------------------------------------------------
-  # Testimonials Section
-  --------------------------------------------------------------*/
-  .temoignage.temoignage-item {
-    background-color: var(--surface-color);
-    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
-    padding: 30px;
-    position: relative;
-    height: 100%;
-  }
-  
-  .temoignage .temoignage-item .temoignage-img {
-    width: 90px;
-    border-radius: 50px;
-    border: 6px solid var(--background-color);
-    float: left;
-    margin: 0 10px 0 0;
-  }
-  
+ /* temoignage section */
+
   .temoignage .temoignage-item h3 {
     font-size: 18px;
     font-weight: bold;
@@ -1626,9 +1588,8 @@
     padding: 0;
   }
   
-  /*--------------------------------------------------------------
-  # Stats Section
-  --------------------------------------------------------------*/
+  
+  /* stats section */
   .stats .stats-item {
     padding: 30px;
     width: 100%;
@@ -1665,9 +1626,9 @@
     font-weight: 500;
   }
   
-  /*--------------------------------------------------------------
-  # Services Section
-  --------------------------------------------------------------*/
+ 
+  /* Services Section */
+  
   .services .service-card {
     height: 100%;
     padding: 30px;
