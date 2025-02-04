@@ -28,6 +28,12 @@
   }
   
 
+  @media screen and (max-width: 768px) {
+    #navmenu ul li a {
+        color: white;
+    }
+}
+
   
   /* Smooth scroll */
   :root {
