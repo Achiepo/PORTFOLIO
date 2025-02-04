@@ -14,9 +14,9 @@
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
+  
+  // navigation mobile liens de même page/hash
+   
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
@@ -26,18 +26,13 @@
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+  
+  //  Activer/désactiver les menus déroulants de la navigation mobile
+  
 
-  /**
-   * Scroll top button
-   */
-
-
-  /**
-   * Animation sur scroll function et init
-   */
+  
+    //Fonction d'animation au défilement et initialisation
+   
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -48,16 +43,16 @@
   }
   window.addEventListener('load', aosInit);
 
-  /**
-   * Initiate glightbox
-   */
+  
+    // Initialiser glightbox.
+   
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  /**
-   * Init swiper sliders
-   */
+  
+    // Initialiser les sliders Swiper.
+   
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
@@ -74,23 +69,22 @@
 
   window.addEventListener("load", initSwiper);
 
-  /**
-   * Initiate Pure Counter
-   */
+  
+  //  Initialiser Pure Counter
+   
   new PureCounter();
 
-  /**
-   * Frequently Asked Questions Toggle
-   */
+  //  Basculer les Questions Fréquemment Posées
+   
   document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
     faqItem.addEventListener('click', () => {
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
+  
+    // Corriger la position de défilement lors du chargement de la page pour les URL contenant des liens avec des ancres.
+   
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -106,7 +100,7 @@
     }
   });
 
-  /**
-   * Navmenu Scrollspy
-   */
+  
+    // Scrollspy du menu de navigation
+   
 })();
