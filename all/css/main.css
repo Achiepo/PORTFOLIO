@@ -721,7 +721,7 @@
   }
   
   .hero .hero-content h1 .accent-text {
-    color: var(--accent-color);
+    color: var(--Jaune-color)
   }
   
   @media (max-width: 992px) {
@@ -1241,55 +1241,11 @@
   
    /* Features Cards Section */
  
-  .cards {
-    --default-color: #555;
-    --heading-color: #333;
+  .card-text{
+    text-align: justify;
+    word-spacing: -1px;
+    max-width: 90%;
   }
-  
-  .cards .box {
-    height: 100%;
-    padding: 40px 30px;
-    border-radius: 10px;
-  }
-  
-  .cards .box i {
-    font-size: 44px;
-    display: inline-block;
-    line-height: 0;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-  }
-  
-  .cards .box h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-  }
-  
-  .cards .box p {
-    font-size: 15px;
-    margin-bottom: 0;
-  }
-  
-  .cards .box.jaune {
-    background-color: rgba(255, 255, 0, 0.486);
-  }
-  
-
-  
-  .cards .box.aqua {
-    background-color: rgba(127, 255, 212, 0.767);
-  }
-  
-  
-  .cards .box.bleu {
-    background-color: rgba(173, 212, 230, 0.986);
-  }
-  
-  .cards .box.light {
-    background-color: rgba(0, 0, 0, 0.151);
-  }
-  
    /* Features 2 Section */
   
   .features-2 .feature-item .feature-icon {
@@ -1591,13 +1547,12 @@
   .temoignage .temoignage-item p {
     font-style: italic;
     margin: 15px 0 0 0;
-    padding: 0;
   }
   
   
   /* stats section */
   .stats .stats-item {
-    padding: 30px;
+    padding: 15px;
     width: 100%;
   }
   
@@ -1637,7 +1592,7 @@
   
   .services .service-card {
     height: 100%;
-    padding: 30px;
+    padding: 15px;
     background: var(--surface-color);
     border-radius: 10px;
     transition: all 0.3s ease;
