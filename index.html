@@ -276,11 +276,11 @@
 
           <div class="col-xl-3 col-md-6">
             <div class="card shadow-sm">
-              <img src="./all/img/Screenshot - 2025-01-27 21-21-56.png" class="card-img-top" alt="Site pour restaurant">
+              <img src="./all/img/Screenshot - 2025-05-16 18-55-19.png" class="card-img-top" alt="Site pour restaurant">
               <div class="card-body">
-                <h5 class="card-title">Site pour restaurant</h5>
-                <p class="card-text">Une plateforme intuitive pour présenter le menu, gérer les commandes et attirer plus de clients.</p>
-                <a href="https://voyageagency.netlify.app" class="btn btn-primary mt-3">Voir le projet</a>
+                <h5 class="card-title">Pharmacie</h5>
+                <p class="card-text">Nous vous offrons des conseils personnalisés pour répondre à tous vos besoins de santé. Notre priorité.</p>
+                <a href="https://pharmacie3-0.vercel.app/" class="btn btn-primary mt-3">Voir le projet</a>
               </div>
             </div>
           </div>
@@ -440,7 +440,7 @@
           </div>
 
           <div class="col-lg-7">
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-form" data-aos="fade-up" id="contact-form" data-aos-delay="300">
               <h3>vos informations</h3>
               <p>Merci de fournir vos informations personnelles pour vous aider à traiter votre demande.</p>
 
@@ -448,7 +448,7 @@
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="votre Nom" required="">
+                    <input type="text" name="name" class="form-control" placeholder="votre Nom"  required="">
                   </div>
 
                   <div class="col-md-6 ">
@@ -560,6 +560,31 @@
 
  <!-- Main JS File -->
  <script src="all/js/main.js"></script>
+
+
+ <script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const to = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const res = await fetch('/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        to,
+        subject,
+        html: `<p>${message}</p>`
+      })
+    });
+
+    const data = await res.json();
+    alert(data.message || 'Email envoyé !');
+  });
+</script>
+
 
 </body>
 </html>
